@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: demo-replicaset
+  labels:
+    app: web
+spec:
+  template:
+    metadata:
+      name: firstpod
+      labels:
+        tier: frontend
+    spec:
+      containers:
+        - name: appcontainer
+          image: vigneshdayalan/kube-demo
+  replicas: 6
+  selector:
+    matchLabels:
+      tier: frontend
+      
+    
