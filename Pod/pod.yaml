@@ -7,5 +7,5 @@ metadata:
 spec:
   containers:
     - name: appcontainer
-      image: nginx
+      image: vigneshdayalan/kube-demo
       
