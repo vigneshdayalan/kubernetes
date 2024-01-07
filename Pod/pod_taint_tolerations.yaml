@@ -1,3 +1,4 @@
+# Tolerations to a Pod:
 apiVersion: v1
 kind: Pod
 metadata:
@@ -14,3 +15,10 @@ spec:
       value: "GPU"
       effect: NoSchedule  
       
+
+# 𝗛𝗼𝘄 𝘁𝗼 𝗔𝗽𝗽𝗹𝘆 𝗧𝗮𝗶𝗻𝘁 𝘁𝗼 𝗮 𝗡𝗼𝗱𝗲:
+# Use the following command:
+# 👉 𝘀𝘆𝗻𝘁𝗮𝘅: kubectl taint nodes <node_name> <key=value>:<taint-effect>
+# 👉 𝗸𝗲𝘆=𝘃𝗮𝗹𝘂𝗲: Condition for the pod to run on that node.
+# 👉 𝘁𝗮𝗶𝗻𝘁-𝗲𝗳𝗳𝗲𝗰𝘁: Defines the impact on pods not tolerating the taint.
+# 👉𝗲.𝗴. kubectl taint node Node1 special=GPU:NoSchedule
