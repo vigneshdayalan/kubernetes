@@ -1,0 +1,20 @@
+# nodeSelector applied to a Pod:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeselectordemo
+  labels:
+    tier: frontend
+spec:
+  containers:
+    - name: appcontainer
+      image: vigneshdayalan/kube-demo
+  nodeSelector:
+    special: GPU      
+      
+
+# 🔗𝗛𝗼𝘄 𝗜𝘁 𝗪𝗼𝗿𝗸𝘀:
+# 👉 Start by labeling the node with a distinct characteristic. Execute the below command to label any node.
+# 👉 𝘀𝘆𝗻𝘁𝗮𝘅: 𝘬𝘶𝘣𝘦𝘤𝘵𝘭 𝘭𝘢𝘣𝘦𝘭 𝘯𝘰𝘥𝘦 <𝘯𝘰𝘥𝘦_𝘯𝘢𝘮𝘦> <𝘭𝘢𝘣𝘦𝘭_𝘬𝘦𝘺>=<𝘭𝘢𝘣𝘦𝘭_𝘷𝘢𝘭𝘶𝘦>
+# 👉 𝗲.𝗴. 𝘬𝘶𝘣𝘦𝘤𝘵𝘭 𝘭𝘢𝘣𝘦𝘭 𝘯𝘰𝘥𝘦 𝘕𝘰𝘥𝘦1 𝘴𝘱𝘦𝘤𝘪𝘢𝘭=𝘎𝘗𝘜
+# 👉 create the Pod with the nodeSelector property
